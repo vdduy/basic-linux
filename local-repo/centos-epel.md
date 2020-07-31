@@ -1,3 +1,20 @@
+yum install epel-release -y
+
+yum install nginx -y
+
+systemctl start nginx
+
+systemctl enable nginx
+
+yum install createrepo  yum-utils -y
+
+chown -R nginx:nginx /data
+
+
+vi /etc/nginx/nginx.conf
+nginx -s reload
+
+
 Repo
 vi /etc/cron.daily/update-centos-repo
 #!/bin/bash
