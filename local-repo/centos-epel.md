@@ -17,6 +17,7 @@ nginx -s reload
 
 Repo
 vi /etc/cron.daily/update-centos-repo
+```
 #!/bin/bash
 DIR=/share/CentOS/7.7.1908/
 for REPO in base centosplus extras updates epel
@@ -30,3 +31,4 @@ do
           createrepo ${DIR}${REPO}/
      fi
 done
+```
